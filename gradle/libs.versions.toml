@@ -9,6 +9,7 @@ lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.9.0"
 composeBom = "2024.04.00"
 navigation = "2.7.7"
+hilt = "2.51.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,6 +25,16 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
+di-dagger = { module = "com.google.dagger:dagger", version.ref = "hilt" }
+di-compilerAnnotation = { module = "com.google.dagger:dagger-compiler", version.ref = "hilt" }
+
+di-daggerAndroid = { module = "com.google.dagger:dagger-android", version.ref = "hilt" }
+di-daggerAndroidSupport = { module = "com.google.dagger:dagger-android-support", version.ref = "hilt" }
+di-daggerAndroidAnndtations = { module = "com.google.dagger:dagger-android-processor", version.ref = "hilt" }
+
+di-hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+di-hiltAndroidCompiler= { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -31,4 +42,4 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+hilt = { id = 'com.google.dagger.hilt.android', version.ref = "hilt" }
