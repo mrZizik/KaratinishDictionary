@@ -61,6 +61,7 @@ dependencies {
 
     // Dagger Core
     implementation(libs.di.dagger)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     kapt(libs.di.compilerAnnotation)
 
     api(libs.di.daggerAndroid)

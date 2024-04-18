@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -25,7 +27,8 @@ class MainActivity : ComponentActivity() {
 
                 NavHost(navController = navController, startDestination = Dictionary) {
                     composable(Dictionary) {
-                        Text(text = vm.words.value ?: "AAA")
+                        val string by vm.words.collectAsStateWithLifecycle("1")
+                        Text(text = string)
                     }
 
                     composable(Word) {

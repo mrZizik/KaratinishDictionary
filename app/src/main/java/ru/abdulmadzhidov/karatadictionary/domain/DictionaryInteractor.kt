@@ -10,6 +10,6 @@ interface DictionaryInteractor {
     fun subscribeWords(): Flow<List<Word>>
 }
 
-class DictionaryInteractorImpl @Inject constructor(private val dictionaryRepository: DictionaryRepositoryImpl): DictionaryInteractor {
+class DictionaryInteractorImpl @Inject constructor(private val dictionaryRepository: DictionaryRepository): DictionaryInteractor {
     override fun subscribeWords(): Flow<List<Word>> = dictionaryRepository.subscribeWords()
 }
