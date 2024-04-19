@@ -58,6 +58,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.pagingRuntime)
+    implementation(libs.androidx.pagingCompose)
 
     // Dagger Core
     implementation(libs.di.dagger)
@@ -71,6 +73,10 @@ dependencies {
     implementation(libs.di.hiltAndroid)
     kapt(libs.di.hiltAndroidCompiler)
 
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt(libs.room.compiler)
+    implementation(libs.room.paging)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
