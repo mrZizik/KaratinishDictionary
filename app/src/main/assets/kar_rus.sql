@@ -1,12 +1,4 @@
-CREATE TABLE kar_rus (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  word varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  translation text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (id),
-  KEY idx_rus_translation (translation(191)) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9080 DEFAULT CHARSET=utf8;
 
-INSERT INTO kar_rus(id,word,translation) VALUES (1,'Абаалъа','Рассеять');
 INSERT INTO kar_rus(id,word,translation) VALUES (2,'Абаалъаъо','Столько, что могу рассеивать');
 INSERT INTO kar_rus(id,word,translation) VALUES (3,'Абаалъа','Расширить');
 INSERT INTO kar_rus(id,word,translation) VALUES (4,'Абабъо','Чем больше расширишь');

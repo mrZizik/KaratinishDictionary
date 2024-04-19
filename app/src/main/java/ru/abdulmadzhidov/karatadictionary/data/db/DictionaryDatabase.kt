@@ -8,7 +8,7 @@ import ru.abdulmadzhidov.karatadictionary.data.db.dao.WordsDao
 import ru.abdulmadzhidov.karatadictionary.data.db.dto.WordLocal
 
 @Database(
-    version = 1,
+    version = 3,
     entities = [
         WordLocal::class
     ]
@@ -30,8 +30,8 @@ abstract class DictionaryDatabase: RoomDatabase() {
                 DictionaryDatabase::class.java,
                 "app.db"
             )
-                .fallbackToDestructiveMigrationFrom()
-                .createFromAsset("kar_rus.sql")
+                .fallbackToDestructiveMigration()
+                .createFromAsset("kar_rus.db")
                 .build()
         }
     }
