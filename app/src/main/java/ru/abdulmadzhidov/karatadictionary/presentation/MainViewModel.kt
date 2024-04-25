@@ -1,14 +1,20 @@
 package ru.abdulmadzhidov.karatadictionary.presentation
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.paging.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
 import ru.abdulmadzhidov.karatadictionary.domain.DictionaryInteractor
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(dictionaryInteractor: DictionaryInteractor): ViewModel() {
+class MainViewModel @Inject constructor(private val dictionaryInteractor: DictionaryInteractor): ViewModel() {
 
-    val words = dictionaryInteractor.subscribeWords().cachedIn(viewModelScope)
+    @OptIn(FlowPreview::class)
+    var words = dictionaryInteractor.subscribeWords().debounce(100L)
+
+    fun onSearchChange(query: String) {
+        dictionaryInteractor.search(query)
+    }
+
 }
