@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">DagestanDictionary</string>
+    <string name="app_name">Каратинский словарь</string>
     <string name="search_query">Искать...</string>
+    <string name="share">Поделиться</string>
 </resources>

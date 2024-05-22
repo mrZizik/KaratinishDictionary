@@ -5,6 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
 import ru.abdulmadzhidov.karatadictionary.domain.DictionaryInteractor
+import ru.abdulmadzhidov.karatadictionary.domain.model.Word
 import javax.inject.Inject
 
 @HiltViewModel
@@ -16,5 +17,4 @@ class MainViewModel @Inject constructor(private val dictionaryInteractor: Dictio
     fun onSearchChange(query: String) {
         dictionaryInteractor.search(query)
     }
-
 }

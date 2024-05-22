@@ -7,6 +7,7 @@ val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
 
 val GreenMain = Color(0xff5DB962)
+val GreenMainDark = Color(0xff468C4A)
 val GreenBackground = Color(0xffe9e9e9)
 val TextMain = Color(0xff0e1016)
 val TextSecondary = Color(0xff9bb49c)
